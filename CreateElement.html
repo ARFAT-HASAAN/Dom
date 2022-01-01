@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element with js</title>
+</head>
+<body>
+    <section id="container">
+        <div>
+            <h3>This is goin to be header 1</h3>
+        </div>
+        <div>
+            <h3>This is goin to be header 2</h3>
+        </div>
+        <div>
+            <h3>This is goin to be header 3</h3>
+        </div>
+    </section>    
+        <h5>end</h5>
+    <script>
+         const div = document.getElementsByTagName('div')
+         
+
+         const container = document.getElementById('container');
+        const newDiv = document.createElement('div');
+        newDiv.innerHTML = `
+        <h3>This is goin to be header 4</h3>
+        `;
+        newDiv.setAttribute('title', 'NEW TITLE');
+         let latdiv = newDiv.getAttribute('title')
+         latdiv = 'this is last div'
+        // newDiv.createAttribute('title', 'this is last div');
+        container.appendChild(newDiv);
+for(element of div){
+              element.style.border = "1px solid black";
+              element.style.padding = "10px";
+              element.style.margin = "10px";
+              element.style.textAlign = 'center'     
+         }
+    </script>
+</body>
+</html>
